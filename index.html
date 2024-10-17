@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="base" content="https://awesome-amortized-inference.bayesflow.org" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" media="(prefers-color-scheme: light)">
+  
+  <style>/* set variables for light and dark mode*/
+:root {
+  --layout-max-width: 50rem;
+  --background-color: #fffff4;
+  --header-color: aliceblue;
+  --text-color: black;
+  --link-color: #0366d6;
+  --link-visited-color: #5a3bb1;
+  --separator-color: #eaecef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1c1919;
+    --header-color: #252431;
+    --text-color: #f5f5f5;
+    --link-color: #3e8df2;
+    --link-visited-color: #9a76ff;
+    --separator-color: #373644;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+h2 {
+  border-bottom: 1px solid var(--separator-color);
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+.content {
+  max-width: var(--layout-max-width);
+  margin: auto;
+}
+
+/* Navigation/Top bar*/
+
+.navigation-container {
+  background-color: var(--header-color);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: space-between;
+  padding: 0.4rem;
+  margin: auto;
+  max-width: var(--layout-max-width);
+}
+
+.top-bar--title {
+  flex: 1;
+}
+
+.top-bar--title>a[href] {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.top-bar--links a {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.top-bar--links a:hover {
+  text-decoration: underline;
+}
+
+/* Hide the first heading to avoid double headings */
+.content h1:first-child {
+  display: none;
+}
+
+footer .c {
+  display: flex;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="navigation-container">
+    <nav class="site-navigation top-bar" role="navigation">
+      <div class="top-bar--title"><a href="https://awesome-amortized-inference.bayesflow.org" title="Awesome Amortized Inference">Awesome Amortized Inference</a></div>
+
+      <div class="top-bar--links">
+        <a href="https://github.com/bayesflow-org/awesome-amortized-inference/blob/main/CONTRIBUTING.md">Contribute here!</a>
+      </div>
+    </nav>
+    </div>
+  </header>
+  <main>
+  <div class="content">
+    <h1 id="awesome-amortized-inference">Awesome Amortized Inference</h1>
+<p><a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" /></a>
+<img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen" alt="Contributions Welcome" />
+<img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey" alt="License: CC0" /></p>
+<p>Welcome to the Awesome Amortized Inference repository!
+This is a curated list of resources, including overviews, software, papers, and other resources related to amortized inference.
+Feel free to explore the entries below and use the provided BibTeX information for citation purposes.
+This is a community-driven project which is currently maintained by <a href="https://www.marvinschmitt.com">Marvin Schmitt</a>.
+Contributions are always welcome, see <a href="https://awesome-amortized-inference.bayesflow.org/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> for a contribution guide.</p>
+<p>This awesome list currently has some overlap with the <code>awesome-neural-sbi</code> list (<a href="https://github.com/smsharma/awesome-neural-sbi">Link</a>) because
+amortized inference has gained populatity in the context of simulation-based inference (SBI) with neural networks.
+However, there is a trend towards broader amortized inference methods that are not necessarily simulation-based.
+This list aims to cover all amortized inference methods, including but not limited to simulation-based inference.
+We highly recommend checking out the <code>awesome-neural-sbi</code> list for more resources on modern simulation-based inference with neural networks.</p>
+<blockquote>
+<p>🚧 <strong>Under construction</strong> 🚧
+This repository is a development version under construction. The list of resources is just a small set for debugging and development purposes.
+For now, we focus on developing features that we think could be useful for the community (e.g., <code>BibTeX</code>-first structure).
+Then, we will evaluate whether this project has the potential to be useful for the community in addition to existing lists
+that are specifically designated to <em>simulation-based inference</em> and not <em>amortized inference</em> (which doesn't need to be simulation-based).
+Once we figure out the direction and deem the project potentially useful for the community, we'll launch and add an extensive set of resources 
+-- hopefully with the help of many awesome people from the community 🧡</p>
+</blockquote>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="https://awesome-amortized-inference.bayesflow.org/#overview-articles">Overview Articles</a></li>
+<li><a href="https://awesome-amortized-inference.bayesflow.org/#software">Software</a></li>
+<li><a href="https://awesome-amortized-inference.bayesflow.org/#methodological-papers">Methodological Papers</a></li>
+<li><a href="https://awesome-amortized-inference.bayesflow.org/#application-papers">Application Papers</a></li>
+<li><a href="https://awesome-amortized-inference.bayesflow.org/#uncategorized">Uncategorized</a></li>
+</ul>
+<h2 id="overview-articles">Overview Articles</h2>
+<ul>
+<li>
+<p><strong>Neural Methods for Amortized Inference</strong> (2024)<br /><em>TLDR: Overview paper of amortized point estimators and full posterior estimators.</em><br />by Andrew Zammit-Mangion, Matthew Sainsbury-Dale, Raphaël Huser<br /><a href="https://arxiv.org/abs/2404.12484">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@misc{zammit-mangion2024neural,
+title = {Neural Methods for Amortized Inference},
+publisher = {arXiv},
+year = {2024},
+author = {Zammit-Mangion, Andrew and Sainsbury-Dale, Matthew and Huser, Raphaël}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>Normalizing flows for probabilistic modeling and inference</strong> (2021)<br />by George Papamakarios, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, Balaji Lakshminarayanan<br /><a href="https://arxiv.org/abs/1912.02762">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{papamakarios2021normalizing,
+title = {Normalizing flows for probabilistic modeling and inference},
+year = {2021},
+publisher = {JMLR.org},
+volume = {22},
+number = {1},
+issn = {1532-4435},
+journal = {J. Mach. Learn. Res.},
+month = {jan},
+articleno = {57},
+numpages = {64},
+author = {Papamakarios, George and Nalisnick, Eric and Rezende, Danilo Jimenez and Mohamed, Shakir and Lakshminarayanan, Balaji}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>The frontier of simulation-based inference</strong> (2020)<br />by Kyle Cranmer, Johann Brehmer, Gilles Louppe<br /><a href="http://dx.doi.org/10.1073/pnas.1912789117">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{Cranmer2020,
+title = {The frontier of simulation-based inference},
+volume = {117},
+ISSN = {1091-6490},
+DOI = {10.1073/pnas.1912789117},
+number = {48},
+journal = {Proceedings of the National Academy of Sciences},
+publisher = {Proceedings of the National Academy of Sciences},
+year = {2020},
+pages = {30055-30062},
+author = {Cranmer, Kyle and Brehmer, Johann and Louppe, Gilles}
+}
+</code>
+</pre></details>
+</li>
+</ul>
+<h2 id="software">Software</h2>
+<ul>
+<li>
+<p><strong>BayesFlow: Amortized Bayesian Workflows With Neural Networks</strong><br /><a href="https://bayesflow.org/">[Code]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{radev2023bayesflow,
+doi = {10.21105/joss.05702},
+year = {2023},
+publisher = {The Open Journal},
+volume = {8},
+number = {89},
+pages = {5702},
+title = {BayesFlow: Amortized Bayesian Workflows With Neural Networks},
+journal = {Journal of Open Source Software},
+author = {Radev, Stefan T. and Schmitt, Marvin and Schumacher, Lukas and Elsemüller, Lasse and Pratz, Valentin and Schälte, Yannik and Köthe, Ullrich and Bürkner, Paul-Christian}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>sbi: A toolkit for simulation-based inference</strong><br /><a href="https://sbi-dev.github.io/sbi/latest/">[Code]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{tejero-cantero2020sbi,
+doi = {10.21105/joss.02505},
+year = {2020},
+publisher = {The Open Journal},
+volume = {5},
+number = {52},
+pages = {2505},
+title = {sbi: A toolkit for simulation-based inference},
+journal = {Journal of Open Source Software},
+author = {Tejero-Cantero, Alvaro and Boelts, Jan and Deistler, Michael and Lueckmann, Jan-Matthis and Durkan, Conor and Gonçalves, Pedro J. and Greenberg, David S. and Macke, Jakob H.}
+}
+</code>
+</pre></details>
+</li>
+</ul>
+<h2 id="methodological-papers">Methodological Papers</h2>
+<ul>
+<li>
+<p><strong>ASPIRE: Iterative Amortized Posterior Inference for Bayesian Inverse Problems</strong> (2024)<br />by Rafael Orozco, Ali Siahkoohi, Mathias Louboutin, Felix J. Herrmann</p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@misc{orozco2024aspire,
+Title = {ASPIRE: Iterative Amortized Posterior Inference for Bayesian Inverse Problems},
+Year = {2024},
+Eprint = {arXiv:2405.05398},
+author = {Orozco, Rafael and Siahkoohi, Ali and Louboutin, Mathias and Herrmann, Felix J.}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>Sensitivity-Aware Amortized Bayesian Inference</strong> (2024)<br /><em>TLDR: Efficient amortized sensitivity analyses with context variables</em><br />by Lasse Elsemüller, Hans Olischläger, Marvin Schmitt, Paul-Christian Bürkner, Ullrich Koethe, Stefan T. Radev<br /><a href="https://github.com/bayesflow-org/SA-ABI">[Code]</a> <a href="https://openreview.net/forum?id=Kxtpa9rvM0">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{elsemueller2024sensitivity,
+title = {Sensitivity-Aware Amortized Bayesian Inference},
+journal = {Transactions on Machine Learning Research},
+issn = {2835-8856},
+year = {2024},
+author = {Elsem{\"u}ller, Lasse and Olischl{\"a}ger, Hans and Schmitt, Marvin and B{\"u}rkner, Paul-Christian and Koethe, Ullrich and Radev, Stefan T.}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>Neural Importance Sampling for Rapid and Reliable Gravitational-Wave Inference</strong> (2023)<br />by Maximilian Dax, Stephen R. Green, Jonathan Gair, Michael Pürrer, Jonas Wildberger, Jakob H. Macke, Alessandra Buonanno, Bernhard Schölkopf<br /><a href="http://dx.doi.org/10.1103/PhysRevLett.130.171403">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@article{dax2023neural,
+title = {Neural Importance Sampling for Rapid and Reliable Gravitational-Wave Inference},
+volume = {130},
+ISSN = {1079-7114},
+DOI = {10.1103/physrevlett.130.171403},
+number = {17},
+journal = {Physical Review Letters},
+publisher = {American Physical Society (APS)},
+year = {2023},
+author = {Dax, Maximilian and Green, Stephen R. and Gair, Jonathan and P\"{u}rrer, Michael and Wildberger, Jonas and Macke, Jakob H. and Buonanno, Alessandra and Sch\"{o}lkopf, Bernhard}
+}
+</code>
+</pre></details>
+</li>
+<li>
+<p><strong>JANA: Jointly Amortized Neural Approximation of Complex Bayesian Models</strong> (2023)<br />by Stefan T. Radev, Marvin Schmitt, Valentin Pratz, Umberto Picchini, Ullrich Köthe, Paul-Christian Bürkner<br /><a href="https://proceedings.mlr.press/v216/radev23a">[Paper]</a> </p>
+<details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@inproceedings{radev2023jana,
+title = {{JANA: Jointly Amortized Neural Approximation of Complex Bayesian Models}},
+booktitle = {Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence},
+pages = {1695--1706},
+year = {2023},
+volume = {216},
+series = {Proceedings of Machine Learning Research},
+publisher = {PMLR},
+author = {Radev, Stefan T. and Schmitt, Marvin and Pratz, Valentin and Picchini, Umberto and K\"othe, Ullrich and B\"urkner, Paul-Christian}
+}
+</code>
+</pre></details>
+</li>
+</ul>
+<h2 id="application-papers">Application Papers</h2>
+<ul>
+<li><strong>Evaluating Sparse Galaxy Simulations via Out-of-Distribution Detection and Amortized Bayesian Model Comparison</strong> (2024)<br />by Lingyi Zhou, Stefan T. Radev, William H. Oliver, Aura Obreja, Zehao Jin, Tobias Buck<br /><a href="https://arxiv.org/abs/2410.10606">[Paper]</a> <details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@inproceedings{zhou2024EvaluatingSparseGalaxy,
+title = {Evaluating {{Sparse Galaxy Simulations}} via {{Out-of-Distribution Detection}} and {{Amortized Bayesian Model Comparison}}},
+booktitle = {38th {{Conference}} on {{Neural Information Processing Systems}}},
+year = {2024},
+author = {Zhou, Lingyi and Radev, Stefan T. and Oliver, William H. and Obreja, Aura and Jin, Zehao and Buck, Tobias}
+}
+</code>
+</pre></details>
+</li>
+</ul>
+<h2 id="uncategorized">Uncategorized</h2>
+<ul>
+<li><strong>Flow Matching for Scalable Simulation-Based Inference</strong> (2023)<br />by Jonas Bernhard Wildberger, Maximilian Dax, Simon Buchholz, Stephen R Green, Jakob H. Macke, Bernhard Schölkopf<br /><a href="https://openreview.net/forum?id=D2cS6SoYlP">[Paper]</a> <a href="https://github.com/dingo-gw/flow-matching-posterior-estimation">[Code]</a> <details>
+<summary>Show BibTeX</summary>
+<pre><code>
+@inproceedings{wildberger2023flow,
+title = {Flow Matching for Scalable Simulation-Based Inference},
+booktitle = {Thirty-seventh Conference on Neural Information Processing Systems},
+year = {2023},
+url = {https://openreview.net/forum?id=D2cS6SoYlP},
+author = {Wildberger, Jonas Bernhard and Dax, Maximilian and Buchholz, Simon and Green, Stephen R and Macke, Jakob H. and Sch{\"o}lkopf, Bernhard}
+}
+</code>
+</pre></details>
+</li>
+</ul>
+
+  </div>
+  </main>
+  <footer>
+    <div class="c">
+        <p> &copy;<span id="year">2024</span> Awesome Amortized Inference. Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a>.</p>    </div>
+  </footer>
+</body>
+</html>
